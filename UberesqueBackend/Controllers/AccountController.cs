@@ -25,11 +25,12 @@ namespace UberesqueBackend.Controllers
         }*/
 
         // POST: api/Account/Register
-        public IHttpActionResult Register(string uid,string pass,string firstname,string lastname, bool driver, string color=null,string make=null,string model=null,string plate=null)
+        public IHttpActionResult Register(string email,string username,string pass,string firstname,string lastname, bool driver, string color=null,int? year=null,string make=null,string model=null,string plate=null)
         {
             User user = new User();
             Vehicle vehicle = null;
-            user.UserName = uid;
+            user.Email = email;
+            user.UserName = username;
             user.Password = pass;
             user.FirstName = firstname;
             user.LastName = lastname;
@@ -38,6 +39,7 @@ namespace UberesqueBackend.Controllers
             {
                 vehicle = new Vehicle();
                 vehicle.Color = color;
+                vehicle.Year = (int)year;
                 vehicle.Make = make;
                 vehicle.Model = model;
                 vehicle.Plate = plate;
@@ -57,6 +59,31 @@ namespace UberesqueBackend.Controllers
             sql.Dispose();
             
             return Json(response);
+        }
+
+        [HttpPost]
+        public IHttpActionResult RequestRide(int uid,string location,float location_lat,float location_long,string destination,float destination_lat,float destination_long)
+        {
+            User user= new Models.User();
+            user.UserID = uid;
+            Ride ride = new Ride(user);
+            ride.Location = location;
+            ride.Location_Lat = location_lat;
+            ride.Location_Long = location_long;
+            ride.Destination = destination;
+            ride.Destination_Lat = destination_lat;
+            ride.Destination_Long = destination_long;
+            SQL sql = new SQL();
+            Response response = sql.RequestRide(ride);
+            return Json(response);
+        }
+
+        [HttpGet]
+        public IHttpActionResult Rides(string username, string password)
+        {
+            SQL sql = new Helper.SQL();
+            Response rides = sql.Rides(username, password);
+            return Json(rides);
         }
 
         // DELETE: api/Account/5

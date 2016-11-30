@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Helper\SQL.cs" />
     <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\Ride.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

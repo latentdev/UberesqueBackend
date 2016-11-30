@@ -22,4 +22,15 @@ namespace UberesqueBackend.Models
             vehicle = in_vehicle;
         }
     }
+
+    public class ResponseRides : Response
+    {
+        public List<Ride> rides;
+       
+
+        public ResponseRides(List<Ride> in_rides)
+        {
+            rides = in_rides;
+        }
+    }
 }

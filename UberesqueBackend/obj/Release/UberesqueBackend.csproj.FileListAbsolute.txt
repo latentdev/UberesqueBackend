@@ -39,3 +39,44 @@ c:\users\laten\documents\visual studio 2015\Projects\UberesqueBackend\UberesqueB
 c:\users\laten\documents\visual studio 2015\Projects\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.csprojResolveAssemblyReference.cache
 c:\users\laten\documents\visual studio 2015\Projects\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.dll
 c:\users\laten\documents\visual studio 2015\Projects\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.pdb
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\ApplicationInsights.config
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\csc.exe
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\vbc.exe
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\VBCSCompiler.exe
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\UberesqueBackend.dll.config
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\UberesqueBackend.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\UberesqueBackend.pdb
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.Web.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Newtonsoft.Json.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Net.Http.Formatting.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Web.Http.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Web.Http.WebHost.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.Web.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\Newtonsoft.Json.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Net.Http.Formatting.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Web.Http.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\bin\System.Web.Http.WebHost.xml
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.dll
+C:\Users\Laten\Documents\GitHub\UberesqueBackend\UberesqueBackend\obj\Release\UberesqueBackend.pdb

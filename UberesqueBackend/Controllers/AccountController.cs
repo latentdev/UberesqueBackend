@@ -64,9 +64,9 @@ namespace UberesqueBackend.Controllers
         [HttpPost]
         public IHttpActionResult RequestRide(int uid,string location,float location_lat,float location_long,string destination,float destination_lat,float destination_long)
         {
-            User user= new Models.User();
-            user.UserID = uid;
-            Ride ride = new Ride(user);
+
+            Ride ride = new Ride();
+            ride.UserID = uid;
             ride.Location = location;
             ride.Location_Lat = location_lat;
             ride.Location_Long = location_long;

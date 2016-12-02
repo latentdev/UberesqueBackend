@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="connectionString-Web.config Connection String" description="connectionString Connection String used in web.config by the application to access the database." defaultValue="Server = tcp:uberesque.database.windows.net, 1433; Initial Catalog = Uberesque; Persist Security Info = False; User ID = CST324; Password = DonnyCordova64; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="c:\\users\\laten\\documents\\visual\ studio\ 2015\\Projects\\UberesqueBackend\\UberesqueBackend\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connectionString']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Laten\\Documents\\GitHub\\UberesqueBackend\\UberesqueBackend\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connectionString']/@connectionString" />
   </parameter>
 </parameters>

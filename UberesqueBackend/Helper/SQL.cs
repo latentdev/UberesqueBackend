@@ -163,7 +163,7 @@ namespace UberesqueBackend.Helper
                 using (SqlCommand rideRequest = new SqlCommand("dbo.RideRequest", uberesqueDB))
                 {
                     rideRequest.CommandType = System.Data.CommandType.StoredProcedure;
-                    rideRequest.Parameters.AddWithValue("@UserID", ride.user.UserID);
+                    rideRequest.Parameters.AddWithValue("@UserID", ride.UserID);
                     rideRequest.Parameters.AddWithValue("@Location", ride.Location);
                     rideRequest.Parameters.AddWithValue("@Location_Lat", ride.Location_Lat);
                     rideRequest.Parameters.AddWithValue("@Location_Long", ride.Location_Long);
@@ -215,9 +215,8 @@ namespace UberesqueBackend.Helper
                                     while (reader2.Read())
                                     {
                                         Ride ride = null;
-                                        User user = new User();
-                                        user.UserName = (string)reader2["UserName"];
-                                        ride = new Ride(user);
+                                        ride = new Ride();
+                                        ride.User = (string)reader2["UserName"];
                                         ride.Location = (string)reader2["Location"];
                                         ride.Location_Lat = (double)reader2["Location_Lat"];
                                         ride.Location_Long = (double)reader2["Location_Long"];

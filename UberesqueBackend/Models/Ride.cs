@@ -7,7 +7,8 @@ namespace UberesqueBackend.Models
 {
     public class Ride
     {
-        public User user;
+        public int UserID { get; set; }
+        public String User { get; set; }
         public String Location { get; set; }
         public double Location_Lat { get; set; }
         public double Location_Long { get; set; }
@@ -17,9 +18,5 @@ namespace UberesqueBackend.Models
         public bool Accepted { get; set; }
         public bool Completed { get; set; }
 
-        public Ride(User in_user)
-        {
-            user = in_user;
-        }
     }
 }

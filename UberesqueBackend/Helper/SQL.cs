@@ -181,7 +181,7 @@ namespace UberesqueBackend.Helper
             catch(Exception e)
             {
                 response = new Response();
-                response.success = true;
+                response.success = false;
                 response.error = e.ToString();
             }
             return response;

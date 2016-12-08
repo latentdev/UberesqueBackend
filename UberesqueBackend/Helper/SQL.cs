@@ -55,9 +55,25 @@ namespace UberesqueBackend.Helper
                             }
                             command.ExecuteNonQuery();
                             command.Dispose();
-
-                            response = new ResponseUser(in_user, in_vehicle);
+                            using (SqlCommand getUID = new SqlCommand("dbo.getUID", uberesqueDB))
+                            {
+                                getUID.CommandType = System.Data.CommandType.StoredProcedure;
+                                getUID.Parameters.AddWithValue("@UserName", in_user.UserName);
+                                getUID.Parameters.AddWithValue("@Password", in_user.Password);
+                                SqlDataReader reader2 = getUID.ExecuteReader();
+                                if (reader2.HasRows)
+                                {
+                                    reader2.Read();
+                                    in_user.UserID = (int)reader2["UserID"];
+                                }
+                                response = new ResponseUser(in_user, in_vehicle);
+                                response.success = true;
+                                response.error = null;
+                                reader2.Close();
+                                getUID.Dispose();
+                            }
                         }
+
                     }
                     else
                     {

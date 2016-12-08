@@ -25,6 +25,7 @@ namespace UberesqueBackend.Controllers
         }*/
 
         // POST: api/Account/Register
+        [HttpGet]
         public IHttpActionResult Register(string email,string username,string pass,string firstname,string lastname, bool driver, string color=null,int? year=null,string make=null,string model=null,string plate=null)
         {
             User user = new User();

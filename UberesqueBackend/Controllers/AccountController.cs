@@ -25,6 +25,7 @@ namespace UberesqueBackend.Controllers
         }*/
 
         // POST: api/Account/Register
+        [HttpGet]
         public IHttpActionResult Register(string email,string username,string pass,string firstname,string lastname, bool driver, string color=null,int? year=null,string make=null,string model=null,string plate=null)
         {
             User user = new User();
@@ -61,7 +62,7 @@ namespace UberesqueBackend.Controllers
             return Json(response);
         }
 
-        [HttpPost]
+        [HttpGet]
         public IHttpActionResult RequestRide(int uid,string location,float location_lat,float location_long,string destination,float destination_lat,float destination_long)
         {
 
@@ -75,6 +76,15 @@ namespace UberesqueBackend.Controllers
             ride.Destination_Long = destination_long;
             SQL sql = new SQL();
             Response response = sql.RequestRide(ride);
+            sql.Dispose();
+            return Json(response);
+        }
+
+        [HttpGet]
+        public IHttpActionResult AcceptRide(int rideid,int driverid,int eta)
+        {
+            SQL sql = new SQL();
+            Response response = sql.AcceptRide(rideid, driverid, eta);
             return Json(response);
         }
 
@@ -83,12 +93,9 @@ namespace UberesqueBackend.Controllers
         {
             SQL sql = new Helper.SQL();
             Response rides = sql.Rides(username, password);
+            sql.Dispose();
             return Json(rides);
         }
 
-        // DELETE: api/Account/5
-        public void Delete(int id)
-        {
-        }
     }
 }

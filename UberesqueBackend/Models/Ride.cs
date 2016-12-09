@@ -7,6 +7,7 @@ namespace UberesqueBackend.Models
 {
     public class Ride
     {
+        public int RideID { get; set; }
         public int UserID { get; set; }
         public String User { get; set; }
         public String Location { get; set; }

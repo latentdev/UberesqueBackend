@@ -9,6 +9,7 @@ namespace UberesqueBackend.Models
     {
         public Boolean success { get; set; }
         public String error { get; set; }
+        public int state {get;set;}
     }
 
     public class ResponseUser:Response

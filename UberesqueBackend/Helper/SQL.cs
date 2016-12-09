@@ -55,9 +55,25 @@ namespace UberesqueBackend.Helper
                             }
                             command.ExecuteNonQuery();
                             command.Dispose();
-
-                            response = new ResponseUser(in_user, in_vehicle);
+                            using (SqlCommand getUID = new SqlCommand("dbo.getUID", uberesqueDB))
+                            {
+                                getUID.CommandType = System.Data.CommandType.StoredProcedure;
+                                getUID.Parameters.AddWithValue("@UserName", in_user.UserName);
+                                getUID.Parameters.AddWithValue("@Password", in_user.Password);
+                                SqlDataReader reader2 = getUID.ExecuteReader();
+                                if (reader2.HasRows)
+                                {
+                                    reader2.Read();
+                                    in_user.UserID = (int)reader2["UserID"];
+                                }
+                                response = new ResponseUser(in_user, in_vehicle);
+                                response.success = true;
+                                response.error = null;
+                                reader2.Close();
+                                getUID.Dispose();
+                            }
                         }
+
                     }
                     else
                     {
@@ -132,9 +148,6 @@ namespace UberesqueBackend.Helper
                         response.success = true;
                         response.error = null;
                     }
-
-
-
                     else
                     {
                         response = new Response();
@@ -186,6 +199,59 @@ namespace UberesqueBackend.Helper
             }
             return response;
         }
+
+        public Response AcceptRide(int rideid, int driverid, int eta)
+        {
+            Response response = null;
+            try
+            {
+                uberesqueDB.Open();
+                using (SqlCommand checkRide = new SqlCommand("dbo.CheckRide", uberesqueDB))
+                {
+                    checkRide.CommandType = System.Data.CommandType.StoredProcedure;
+                    checkRide.Parameters.AddWithValue("@RideID", rideid);
+                    SqlDataReader reader = checkRide.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        bool Accepted = (bool)reader["Accepted"];
+                        reader.Close();
+                        if (!Accepted)
+                        {
+                            using (SqlCommand acceptRide = new SqlCommand("dbo.AcceptRide", uberesqueDB))
+                            {
+                                acceptRide.CommandType = System.Data.CommandType.StoredProcedure;
+                                acceptRide.Parameters.AddWithValue("@RideID", rideid);
+                                acceptRide.Parameters.AddWithValue("@DriverID", driverid);
+                                acceptRide.Parameters.AddWithValue("@ETA", eta);
+                                acceptRide.ExecuteNonQuery();
+                                acceptRide.Dispose();
+                                response = new Response();
+                                response.success = true;
+                                response.state = 1;
+                                response.error = null;
+                            }
+                        }
+                        else
+                        {
+                            response = new Response();
+                            response.success = false;
+                            response.state = 1;
+                            response.error = "Ride has already been accepted";
+                        }
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                response = new Response();
+                response.success = false;
+                response.error = e.ToString();
+            }
+            return response;
+        }
+
         public Response Rides(string username, string password)
         {
             Response response = null;
@@ -216,6 +282,7 @@ namespace UberesqueBackend.Helper
                                     {
                                         Ride ride = null;
                                         ride = new Ride();
+                                        ride.RideID = (int)reader2["RideID"];
                                         ride.User = (string)reader2["UserName"];
                                         ride.Location = (string)reader2["Location"];
                                         ride.Location_Lat = (double)reader2["Location_Lat"];
@@ -229,9 +296,8 @@ namespace UberesqueBackend.Helper
                                     }
                                 }
                             }
-
-                            //var x = new JavaScriptSerializer().Serialize(rides);
                             response = new ResponseRides(rides);
+                            response.state = 0;
                             response.success = true;
                         }
                     }

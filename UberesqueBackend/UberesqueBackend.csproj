@@ -132,7 +132,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <None Include="Properties\PublishProfiles\Uberesque - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\Uberesque - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\Uberesque - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\Uberesque - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
